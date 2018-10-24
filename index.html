@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            min-width: 320px;
+            font-size: 25px;
+        }
+
+        #outer-form {
+            background-color: chocolate;
+            margin: 0 auto;
+            border-radius: 10px;
+            width: 75%;
+            max-width: 900px;
+            padding: 10px;
+            padding-top: 20px;
+        }
+
+        .labels {
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+            padding: 5px;
+            vertical-align: top;
+            margin-top: 4px;
+        }
+
+        .user-input {
+            display: inline-block;
+            text-align: left;
+            width: 48%;
+            vertical-align: middle;
+        }
+
+        .input-field {
+            height: 20px;
+            width: 280px;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .dropdown {
+            height: 35px;
+            width: 140px;
+            padding: 5px;
+            margin: 10px;
+            /*margin-top: 15px;*/
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .radio, .checkbox {
+            position: relative;
+            left: -43px;
+            margin-left: 10px;
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            height: 20px;
+            width: 20px;
+            float: left;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #submit {
+            background-color: brown;
+            border-radius: 4px;
+            color: chocolate;
+            font-size: 1em;
+            height: 40px;
+            width: 96px;
+            margin: 10px;
+            border: 0px solid;
+        }
+    </style>
+</head>
+<body>
+<h1 id="title">Title</h1>
+<div id="outer-form">
+    <p id="description">Description</p>
+    <form id="survey-form">
+        <div class="rows">
+            <div class="labels"><label id="name-label" for="name">Name:</label></div>
+            <div class="user-input"><input id="name" class="input-field" type="text" required placeholder="Name"/></div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label id="email-label" for="email">Email:</label></div>
+            <div class="user-input"><input id="email" class="input-field" type="email" required placeholder="Email"/>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label id="number-label" for="number">Number:</label></div>
+            <div class="user-input"><input id="number" class="input-field" type="number" min="1" max="999999999"
+                                           placeholder="Number"/></div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label for="dropdown">Position: </label></div>
+            <div class="user-input">
+                <select id="dropdown" class="dropdown">
+                    <option disabled>Select an option</option>
+                    <option>Student</option>
+                    <option>Graduate</option>
+                    <option>Worker</option>
+                </select>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label>Choose one:</label></div>
+            <div class="user-input">
+                <ul style="list-style: none; margin-top: 10px">
+                    <li class="radio"><label>One<input type="radio" name="radio-buttons" value="1"/></label></li>
+                    <li class="radio"><label>Two<input type="radio" name="radio-buttons" value="2"/></label></li>
+                    <li class="radio"><label>Three<input type="radio" name="radio-buttons" value="3"/></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label>Skills:</label></div>
+            <div class="user-input">
+                <ul style="list-style: none; margin-top: 10px">
+                    <li class="checkbox"><label>Java<input type="checkbox" value="1"/></label></li>
+                    <li class="checkbox"><label>Python<input type="checkbox" value="2"/></label></li>
+                    <li class="checkbox"><label>Java Script<input type="checkbox" value="3"/></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="labels"><label for="comments">Comments:</label></div>
+            <div class="user-input">
+                <textarea id="comments" class="input-field"
+                          style="height: 72px; resize: vertical; margin-top: 10px; margin-bottom: 10px;" name="comment"
+                          placeholder="Enter your comment here..."></textarea>
+            </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</div>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
