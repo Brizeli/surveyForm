@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    min-width: 320px;
+    font-size: 25px;
+}
+
+#outer-form {
+    background-color: chocolate;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 75%;
+    max-width: 900px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 4px;
+}
+
+.user-input {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    /*margin-top: 15px;*/
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.radio, .checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    float: left;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#submit {
+    background-color: brown;
+    border-radius: 4px;
+    color: chocolate;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+}
